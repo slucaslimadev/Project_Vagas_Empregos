@@ -3,10 +3,11 @@ from selenium.webdriver.common.by import By
 from datetime import datetime
 import openpyxl
 
+
 navegador = webdriver.Chrome()
 navegador.get("https://www.empregare.com/pt-br/vagas?query=software&localidade=&ordenacao=DataAtualizacao")
 
-empresas = navegador.find_elements(By.XPATH, "//p[@class='text-truncate card-vaga-empresa']")
+empresas = navegador.find_elements(By.XPATH, "//p[@class='text-truncate card-vaga-empresa']") 
 
 datas_publicacao = navegador.find_elements(By.CLASS_NAME, 'texto-data-card')
 
